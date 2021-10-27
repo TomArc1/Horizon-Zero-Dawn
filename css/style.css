@@ -1,0 +1,881 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    scroll-behavior: smooth;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------
+-----------------------------------HEADER-----------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
+
+.header{
+    width: 100%;
+    height: 70px;
+    padding: 0 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+}
+@media screen and (max-width: 812px) {
+    .header{
+       height: 50px;
+       flex-direction: row-reverse;
+    }
+}
+
+.logo{
+    width: 104px;
+    height: 29px;
+}
+
+@media screen and (max-width: 812px) {
+    .logo{
+       width: 96px;
+       height: 23px;
+    }
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 400px;
+}
+
+@media screen and (max-width: 812px) {
+    .menu{
+        width: 300px;
+    }
+}
+
+.menu__item{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    letter-spacing: .5px;
+}
+
+@media screen and (max-width: 812px) {
+    .menu__item{
+        font-size: 12px;
+    }
+}
+
+.menu__item-link{
+    text-decoration: none;
+    color: #3B313F;
+}
+.menu__item-link:hover{
+    font-weight: 500;
+}
+
+.menu-burguer{
+    display: none;
+}
+
+@media screen and (max-width: 568px) {
+
+    .menu-burguer{
+        display: block;
+        margin-right: auto;
+    }
+    .menu{
+        flex-direction: column;
+        justify-content:initial;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 50px;
+        padding-top: 100px;
+        background-color: #fff;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+    .menu__item{
+        font-size: 32px;
+        line-height: 33px;
+        text-align: center;
+        margin-bottom: 64px;
+    }
+    .menu__item-link:hover{
+        border-bottom: 2px solid #29232C;
+    }
+
+    .nav--show{
+        transform: translateX(0);
+    }
+
+}
+
+
+.burguer{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.bar{
+    width: 100%;
+    height: 2px;
+    background-color: #29232c;
+}
+
+
+/* ----------------------------------------------------------------------------------------------
+-----------------------------------SECTION 1-----------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
+
+.section-1{
+    position: relative;
+}
+
+.paralax{
+    position: inherit;
+}
+
+.imgwall{
+    width: 100%;
+}
+
+.para-abs{
+    position: absolute;
+}
+.para-abs:first-child{
+    z-index: -3;
+}
+.para-abs:nth-child(2){
+    z-index: -2;
+
+}
+.para-abs:last-child{
+    z-index: -1;
+}
+.para-fix{
+    position: relative;
+    z-index: 5;
+}
+
+.imgphone{
+    display: none;
+}
+
+@media screen and (max-width: 568px) {
+
+    .section-1{
+        height: 100vh;
+    }
+    
+    .paralax{
+        display: none;
+    }
+    .imgphone{
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+    .imgwall__bottom{
+        display: none;
+    }
+}
+
+
+.box__title{
+    position: absolute;
+    z-index: 20;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #ffff;
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+
+.title{
+    font-weight: 900;
+    font-size: 120px;
+    margin-bottom: 0;
+    animation: title 3s linear;
+    animation-fill-mode: both;
+}
+
+@media screen and (max-width: 812px) {
+    .title{
+        font-weight: 900;
+        font-size: 80px;
+    }
+}
+
+.subtitle{
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 0;
+    animation: title 3s linear;
+    animation-fill-mode: both;
+}
+
+@keyframes title{
+    0%{
+        opacity: .1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.imgwall__bottom{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    z-index: 10;
+    bottom: 200px;
+    background: linear-gradient(180deg, transparent, #29232c, #29232c);
+}
+
+
+/* ----------------------------------------------------------------------------------------------
+-----------------------------------SECTION 2-----------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
+
+.section-2{
+    margin-top: -200px;
+    background: #29232c;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+    .section-2{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .section-2{
+        margin-top: 0;
+        padding-top: 50px;
+    }
+}
+
+
+
+.s-2__left{
+    width: 40%;
+    color: #ffff;
+    margin-left: 75px;
+}
+
+@media screen and (max-width: 1024px) {
+    .s-2__left{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+}
+
+.history__title-h4{
+    position: relative;
+    font-family: 'Automobile Contest';
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 57px;
+    color: #F16B68;
+    letter-spacing: .02em;
+    z-index: 20;
+}
+
+.history__title-h3{
+    position: relative;
+    top: -30px;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 70px;
+    z-index: 10;
+}
+
+.history__info{
+    width: 439px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: .02em;
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .history__title-h4, .history__title-h3, .history__info {
+        text-align: center;
+    }
+    .history__info{
+        padding: 0px 88px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .history__info{
+        padding: 0px 0px;
+        width: 100%;
+    }
+}
+
+
+.history__info-p:first-child{
+    margin-bottom: 32px;
+}
+
+.history__info-p-span{
+    font-weight: bold;
+    color: #FDF9E3;
+}
+
+.history__info-p:nth-child(2){
+    border-left: 1px solid #F16B68;
+    font-weight: bold;
+    padding-left: 17px;
+    margin-bottom: 32px;
+}
+
+.history__info-p:nth-child(3){
+    margin-bottom: 32px;
+}
+
+.platforms{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .platforms{
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.platforms-title{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .02em;
+}
+
+.platforms__link{
+    margin-left: 20px;
+    opacity: .7;
+    transition: .5s;
+}
+
+.platforms__link:hover{
+    opacity: 1;
+}
+
+.platforms__link-sony{
+    width: 50px;
+    height: 28px;
+}
+
+.platforms__link-steam{
+    width: 27px;
+    height: 28px;
+}
+
+.s-2__right{
+    width: 50%;
+    position: relative;
+    top: -45px;
+}
+
+.historyimg-op1{
+    width: 100%;
+}
+
+.historyimg-op2{
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .s-2__right{
+        width: 100%;
+    }
+
+    .historyimg-op1{
+        display: none;
+    }
+    
+    .historyimg-op2{
+        display: block;
+        width: 100%;
+        float: right;
+    }
+    
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------
+-----------------------------------SECTION 3-----------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
+
+.section-3{
+    background-color: #3B313F;
+    padding: 88px 0;
+}
+
+.tribes-sup__h4{
+    display: inline-block;
+    width: 100%;
+    font-family: 'Automobile Contest';
+    font-weight: 400;
+    font-size: 50px;
+    color: #F16B68;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.tribes-sup__h3{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: -25px;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.tribes-sup__p{
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1024px) {
+    .tribes-sup__p{
+        width: 422px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .br{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .tribes-sup__p{
+        width: 300px;
+    }
+}
+
+.tribes-inf{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tribes-inf__content{
+    position: relative;
+}
+
+.tribes-inf__content-h4{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FDF9E3;
+    opacity: 0;
+    transition: .25s;
+}
+
+.tribes-inf__content-h4span{
+    text-transform: lowercase;
+    font-weight: 300;
+    line-height: 29px;
+}
+
+.tribes-inf__content-img{
+    width: 346px;
+    transition: .5s;
+}
+
+.tribes-inf__content:hover .tribes-inf__content-h4{
+    opacity: 1;
+} 
+
+.tribes-inf__content:hover .tribes-inf__content-img{
+    opacity: .1;
+}
+     
+
+/* ----------------------------------------------------------------------------------------------
+-----------------------------------SECTION 4-----------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
+
+.section-4{
+    padding-top: 66px;
+    background-color: #29232C;
+}
+
+.weapimg{
+    width: 586px;
+}
+
+.section-4__sup{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+}
+@media screen and (max-width: 1024px) {
+    .section-4__sup{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.aloyimages{
+    position: relative;
+    width: 586px;
+    height: 431px;
+}
+
+.aloyimg{
+    width: 100%;
+    height: 100%;
+}
+
+.aloyimg2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+    animation: aloyimg2 3s linear infinite forwards;
+}
+
+@keyframes aloyimg2{
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+    .aloyimages{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.aloy-info{
+    position: relative;
+    top: 10px;
+}
+
+.aloy-info__h4{
+    font-family: 'Automobile Contest';
+    font-weight: 200;
+    font-size: 50px;
+    letter-spacing: 0.02em;
+    color: #F16B68;
+    margin-bottom: -10px;
+}
+
+.aloy-info__h3{
+    position: relative;
+    top: -20px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.aloy-info__p{
+    display: inline-block;
+    width: 375px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color:#FDF9E3
+}
+
+@media screen and (max-width: 1024px) {
+    .aloy-info__h4, .aloy-info__h3{
+        text-align: center;
+    }
+    .aloy-info__p{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .aloy-info__p{
+        width: 300px;
+    }
+}
+
+
+.section-4__inf{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+    .section-4__inf{
+        flex-direction: column-reverse;
+        align-items: center;
+
+    }
+}
+
+.weapon__h3{
+    margin-bottom: 24px;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 0.02em;
+    color: #F16B68;
+}
+
+.weapon__p{
+    display: inline-block;
+    width: 384px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #FDF9E3;
+}
+@media screen and (max-width: 568px) {
+    .weapon__p{
+        width: 300px;
+    }
+}
+
+.weapimg{
+    position: relative;
+    top: -110px;
+}
+
+@media screen and (max-width: 1024px) {
+    .weapimg{
+        top: 0;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .weapon__h3{
+        text-align: center;
+    }
+
+    .weapon__p{
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width:970px) {
+    .weapimg{
+        top: 0;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------
+-----------------------------------SECTION 5-----------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
+
+.section-5{
+    background-color: #29232C;
+}
+
+.section-5__h4, .section-5__h3{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.section-5__h4{
+    font-family: 'Automobile Contest';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: .01;
+    letter-spacing: 0.02em;
+    color: #F16B68;
+}
+
+.section-5__h3{
+    margin-bottom: 33px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: .8;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.mapimg{
+    width: 100%;
+    margin-bottom: 62px;
+}
+
+/* ----------------------------------------------------------------------------------------------
+-----------------------------------FOOTER-----------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
+
+.footer{
+    background-color: #fff;
+    padding: 30px 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-foot{
+    margin-bottom: 16px;
+}
+
+.ul-foot{
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu2{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 400px;
+}
+
+
+.menu-foot1, .menu-foot2{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.menu__item-link-foot{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #3B313F;    
+}
+
+@media screen and (max-width: 568px) {
+    .menu-foot1, .menu-foot2{
+        width: 160px;
+    }
+    
+    .menu__item-link-foot{
+        font-size: 10px;
+        line-height: 11px;
+    }   
+}
+@media screen and (max-width: 414px) {
+    .menu-foot1, .menu-foot2{
+        width: 120px;
+        margin-top: -7px;
+    }
+    
+    .menu__item-link-foot{
+        font-size: 7px;
+        line-height: 6px;
+    }  
+}
+
+
+.itm-map{
+    margin-right: 7px;
+}
+
+.footer-inner__right-sm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-bottom: 2rem;
+}
+
+.img-sm{
+    transition: .25s;
+}
+
+.img-sm:hover{
+    transform: scale(1.2);
+}
+
+.img-sm__twit, .img-sm__ig, .img-sm__face{
+    width: 24px;
+}
+
+.footer-inner__right-p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #717171;
+}
+
+@media screen and (max-width: 812px) {
+    .footer-inner__right-p{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 568px) {
+    .footer-inner__right-p{
+        font-size: 8px;
+
+    }
+}
+@media screen and (max-width: 414px) {
+    .footer-inner__right-sm{
+        width: 100px;
+        margin-top: .2rem;
+        margin-bottom: 1rem;
+
+    }
+    .img-sm__twit, .img-sm__ig, .img-sm__face{
+        width: 20px;
+    }
+    .footer-inner__right-p{
+        line-height: 9px;
+    }
+}
